@@ -67,6 +67,8 @@ flutter:
   # Language files.
   - assets/i18n/en.json
   - assets/i18n/ar.json
+  - assets/icons/
+  - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

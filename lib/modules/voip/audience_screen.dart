@@ -63,9 +63,7 @@ class _AudiencePageState extends State<AudiencePage> {
               layoutType: Layout.floating,
               enableHostControls: true, // Add this to enable host controls
             ),
-            AgoraVideoButtons(
-              client: client,
-            ),
+            AgoraVideoButtons(client: client),
           ],
         ),
       ),

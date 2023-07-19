@@ -56,7 +56,7 @@ abstract class AppDimen {
   static const double sizeSmallCardCorner = 8.0;
   static const double sizeMedCardCorner = 10.0;
   static const double sizeLargeCardCorner = 12.0;
-  static const double sizeButtonCorner = 8.0;
+  static const double sizeButtonCorner = 24.0;
   static const double sizeDialogCorner = 25.0;
   static const double sizeProgressBarCorner = 25.0;
   static const double sizeAppBarLogoWidth = 111.0;

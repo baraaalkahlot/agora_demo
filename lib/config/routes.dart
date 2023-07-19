@@ -1,3 +1,4 @@
+import 'package:agora_demo/modules/auth/board_screen.dart';
 import 'package:agora_demo/modules/home/home_screen.dart';
 import 'package:agora_demo/modules/voip/audience_screen.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +10,12 @@ class Routes {
   static const home = '/home';
   static const voip = '/voip';
   static const audience = '/audience';
+  static const board = '/board';
 }
 
 Map<String, WidgetBuilder> appRoutes = {
   Routes.home: (context) => const HomeScreen(),
   Routes.voip: (context) => const VoipScreen(),
-  Routes.audience: (context) => const AudienceScreen()
+  Routes.audience: (context) => const AudienceScreen(),
+  Routes.board: (context) => const BoardScreen()
 };
