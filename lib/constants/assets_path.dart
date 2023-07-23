@@ -11,6 +11,9 @@ abstract class Assets {
   static const String telegramIcon = "$iconPath/ic_telegram.svg";
   static const String phoneIcon = "$iconPath/ic_phone.svg";
   static const String googleIcon = "$iconPath/ic_google.svg";
+  static const String googlePlusIcon = "$iconPath/ic_google_plus.svg";
+  static const String facebookIcon = "$iconPath/ic_facebook.svg";
+  static const String twitterIcon = "$iconPath/ic_twitter.svg";
   static const String checkIcon = "$iconPath/ic_check.svg";
 
   /// Images

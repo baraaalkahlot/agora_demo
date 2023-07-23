@@ -142,13 +142,13 @@ extension WidgetStyleExtension on Widget {
   static InputDecoration outlinedInputDecoration = InputDecoration(
     floatingLabelBehavior: FloatingLabelBehavior.never,
     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
+      borderRadius: BorderRadius.circular(25.0),
       borderSide: const BorderSide(
         color: AppColors.dawnPink,
       ),
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
+      borderRadius: BorderRadius.circular(25.0),
       borderSide: const BorderSide(
         color: AppColors.primaryColor,
       ),
@@ -158,13 +158,13 @@ extension WidgetStyleExtension on Widget {
   //  Filled Input Field Decoration
   static InputDecoration filledInputDecoration = InputDecoration(
     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
+      borderRadius: BorderRadius.circular(25.0),
       borderSide: const BorderSide(
         color: AppColors.dawnPink,
       ),
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.0),
+      borderRadius: BorderRadius.circular(25.0),
       borderSide: const BorderSide(
         color: AppColors.dawnPink,
       ),

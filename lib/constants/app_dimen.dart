@@ -13,6 +13,7 @@ abstract class AppDimen {
 
   /// Typical space between widget
   static const double spacingX3Jumbo = 120.0;
+  static const double spacingJumboPlus = 50.0;
   static const double spacingJumbo = 40.0;
   static const double spacingHuge = 30.0;
   static const double spacingLarger = 25.0;

@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 extension AppColors on Color {
-  static const Color primaryColor = Color(0xFF7E53FD); // Primary Color
-  static const Color heliotrope = Color(0xFFD753FD); // Secondary Color
+  static const Color primaryColor = Color(0xFF6950FB); // Primary Color
+  static const Color heliotrope = Color(0xFFB83AF3); // Secondary Color
   static const Color athensGray = Color(0xFFF0F1F5); // Layout Background Color
 
   static const Color white = Color(0xFFFFFFFF);
@@ -38,6 +38,8 @@ extension AppColors on Color {
   static const Color wildSand = Color(0xFFF5F5F5);
   static const Color blueChalk = Color(0xFFF1EDFE);
   static const Color santasGray = Color(0xFF999FAC);
+  static const Color lightGray = Color(0xFFFBFBFB);
+  static const Color gray = Color(0xFF9B9B9B);
   static const Color trout = Color(0xFF4F5A65);
   static const Color selago = Color(0xFFEEE9FD);
   static const Color rumSwizzle = Color(0xFFF5F6D8);

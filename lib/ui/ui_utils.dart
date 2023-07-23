@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../constants/app_colors.dart';
@@ -7,6 +8,9 @@ import '../../constants/app_dimen.dart';
 import '../../constants/assets_path.dart';
 import '../services/app_localization.dart';
 import 'app_styles.dart';
+import 'bloc/password_visibility_bloc.dart';
+import 'bloc/password_visibility_event.dart';
+import 'bloc/password_visibility_state.dart';
 
 ///All the custom UI widgets like an input text box with search icon, autocomplete widgets,
 ///Error message banners, custom checkbox chips related utils can be present in this file
@@ -217,6 +221,60 @@ class MeltedButton extends StatelessWidget {
   }
 }
 
+class AppPasswordField extends StatelessWidget {
+  final TextEditingController controller;
+  final ValueChanged<String>? onChanged;
+  final String? errorText;
+
+  const AppPasswordField(
+      {Key? key, required this.controller, this.onChanged, this.errorText})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    bool passwordVisibility = false;
+    return BlocProvider<PasswordVisibilityBloc>(
+      create: (_) => PasswordVisibilityBloc(),
+      child: BlocBuilder<PasswordVisibilityBloc, PasswordVisibilityState>(
+        builder: (context, state) => TextFormField(
+          keyboardType: TextInputType.visiblePassword,
+          controller: controller,
+          onChanged: onChanged,
+          decoration: InputDecoration(
+            errorText: errorText,
+            suffixIcon: IconButton(
+                icon: Icon(
+                  state.isVisible
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
+                ),
+                onPressed: () {
+                  BlocProvider.of<PasswordVisibilityBloc>(context)
+                      .add(VisibilityChanged(isVisible: !state.isVisible));
+                  passwordVisibility = !passwordVisibility;
+                }),
+            floatingLabelBehavior: FloatingLabelBehavior.never,
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(25.0),
+              borderSide: const BorderSide(
+                color: AppColors.dawnPink,
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(25.0),
+              borderSide: const BorderSide(
+                color: AppColors.primaryColor,
+              ),
+            ),
+          ),
+          obscureText: !state.isVisible,
+          enableSuggestions: false,
+          autocorrect: false,
+        ),
+      ),
+    );
+  }
+}
 
 class DateTimeChip extends StatelessWidget {
   final int index;

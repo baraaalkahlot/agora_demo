@@ -85,7 +85,7 @@ class _AppComponentState extends State<AppComponentStateful>
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          initialRoute: Routes.board,
+          initialRoute: Routes.login,
           routes: appRoutes,
         ));
   }
